@@ -1,26 +1,33 @@
-.cards > ul {
+.linkables > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 16px;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
 }
-.cards > ul > li {
+.linkables > ul > li {
   border: 1px solid var(--highlight-background-color);
   background-color: var(--background-color);
 }
-.cards > ul > li img {
+.linkables > ul > li img {
   width: 100%;
   aspect-ratio: 4/3;
   object-fit: cover;
 }
-.cards .cards-card-body {
+.linkables .linkables-linkable-body {
   margin: 16px;
 }
-.cards .cards-card-body > *:first-child {
+.linkables .linkables-linkable-body > *:first-child {
   margin-top: 0;
 }
-.cards .cards-card-image {
+.linkables .linkables-linkable-image {
   line-height: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2em;
+}
+.linkables .linkables-linkable-image .linkables-linkable-url {
+  line-height: 1.5em;
+  padding: 1em;
 }

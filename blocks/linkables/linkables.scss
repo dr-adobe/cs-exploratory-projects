@@ -1,14 +1,16 @@
-.cards {
+.linkables {
 	>ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-		grid-gap: 16px;
+		grid-template-columns: 1fr;
+		grid-gap: 1em;
+		
 		>li {
 			border: 1px solid var(--highlight-background-color);
 			background-color: var(--background-color);
+		
 			img {
 				width: 100%;
 				aspect-ratio: 4 / 3;
@@ -16,15 +18,24 @@
 			}
 		}
 	}
-	.cards-card-body {
+	.linkables-linkable-body {
 		margin: 16px;
+		
 		>* {
 			&:first-child {
 				margin-top: 0;
 			}
 		}
 	}
-	.cards-card-image {
+	.linkables-linkable-image {
 		line-height: 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 2em;
+
+		.linkables-linkable-url {
+			line-height: 1.5em;
+			padding: 1em;
+		}
 	}
 }

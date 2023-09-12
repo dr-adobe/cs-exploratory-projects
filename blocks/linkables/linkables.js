@@ -17,12 +17,12 @@ export default function decorate(block) {
 ul.querySelectorAll('img').forEach((img) => {
   
   const picture = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
-  let caption = dom.createElement("div");
+  let caption = document.createElement("div");
   caption.className = "linkables-linkable-url";
   caption.textContent = img.src;
   img.closest('picture').replaceWith(picture)
-  picture.insertAdjacentElement(caption);
-  
+  picture.insertAdjacentElement('afterend', caption);
+
 });
 
 
